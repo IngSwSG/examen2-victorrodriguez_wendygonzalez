@@ -11,8 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('material__unidads', function (Blueprint $table) {
+        Schema::create('requisicions', function (Blueprint $table) {
             $table->id();
+             $table->date('fecha');
+    $table->string('estado');
             $table->timestamps();
         });
     }
@@ -22,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('material__unidads');
+        Schema::dropIfExists('requisicions');
     }
 };

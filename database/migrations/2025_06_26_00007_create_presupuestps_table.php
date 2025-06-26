@@ -11,9 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('rols', function (Blueprint $table) {
+        Schema::create('presupuestps', function (Blueprint $table) {
             $table->id();
+                $table->string('nombrePresupuesto');
+    $table->unsignedBigInteger('idUnidad')->nullable();
             $table->timestamps();
+
+            $table->foreign('idUnidad')->references('id')->on('unidads')->onDelete('set null');
         });
     }
 
@@ -22,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('rols');
+        Schema::dropIfExists('presupuestps');
     }
 };

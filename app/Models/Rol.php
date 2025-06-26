@@ -22,5 +22,5 @@ class Rol extends Model
     public function usuarios()
     {
         return $this->hasOne(Usuario::class, 'idRol');
-    }
+}
 }

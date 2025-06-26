@@ -33,5 +33,5 @@ class MaterialUnidad extends Model
     public function presupuesto()
     {
         return $this->belongsTo(Presupuesto ::class, 'codigoPresupuesto');
-   }
+    }
 }
