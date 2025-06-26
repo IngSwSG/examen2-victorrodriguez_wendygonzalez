@@ -10,7 +10,7 @@ class Material extends Model
     use HasFactory;
 
     protected $fillable = [
-        'codigo', 
+    
         'unidad_medida', 
         'descripcion', 
         'ubicacion', 
